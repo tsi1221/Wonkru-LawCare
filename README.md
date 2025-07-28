@@ -9,8 +9,6 @@
 
 🧑‍💻🧑‍💻 Asha Mahamed
 
-Note: At least one contributor is a registered participant of the hackathon.
-
 🔢 Project Synopsis
 
 🔍 Problem Statement
@@ -51,29 +49,17 @@ The solution is user-friendly, multilingual (Amharic, Oromo, Tigrinya, English),
 
 🎯 Expected Outcome
 
-Metric
+Metric                          Target (Year 1)
 
-Target (Year 1)
+Users Served                    2,300+ families
 
-Users Served
+Legal Cost Savings              80% compared to traditional services
 
-2,300+ families
+Rural User Share                40%
 
-Legal Cost Savings
+Case Resolution Time            Reduced by 50%
 
-80% compared to traditional services
-
-Rural User Share
-
-40%
-
-Case Resolution Time
-
-Reduced by 50%
-
-Long-term vision:
-
-Expand to Kenya and Rwanda by 2026
+Long-term vision                Expand to Kenya and Rwanda by 2026
 
 Partner with e-court systems for seamless digital filings
 
