@@ -1,0 +1,25 @@
+{
+  "short_name": "React App",
+  "name": "Create React App Sample",
+  "icons": [
+    {
+      "src": "https://www.google.com/imgres?q=law%20care&imgurl=https%3A%2F%2Fwww.apu.apus.edu%2Fimages%2Fshared%2Fdefault-album%2Fwhat-is-health-law.jpg&imgrefurl=https%3A%2F%2Fwww.apu.apus.edu%2Farea-of-study%2Fsecurity-and-global-studies%2Fresources%2Fwhat-is-health-law%2F&docid=Qg5ae5OfJyytxM&tbnid=7Odqbii2eDLXDM&vet=12ahUKEwjqh-KxrOKOAxX2g_0HHX7eE0kQM3oECB4QAA..i&w=1448&h=724&hcb=2&ved=2ahUKEwjqh-KxrOKOAxX2g_0HHX7eE0kQM3oECB4QAA",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "logo1.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "logo512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
