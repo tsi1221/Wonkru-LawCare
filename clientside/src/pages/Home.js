@@ -2,6 +2,7 @@ import React from "react";
 import heroImage from "../assets/hero.png";
 import "../styles/Home.css";
 
+
 const Home = () => {
   return (
     <div className="home-container">
