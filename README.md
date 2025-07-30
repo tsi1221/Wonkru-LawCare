@@ -216,12 +216,13 @@ Features
     Prerequisites
 
     Docker & Docker Compose installed (Install Docker)
-
+    
     Git installed (Install Git)
     Installation and Setup
 1. Clone the repository
 
 git clone https://github.com/tsi1221/Wonkru-LawCare.git
+
 cd Wonkru-LawCare
 
 2. Create environment file for backend
@@ -241,6 +242,10 @@ docker-compose up --build
     Open http://localhost:3000 in your browser
 
     Use the Fayda OAuth login to authenticate
+       # Test FIN: 6140798523917519
+       # OTP: 111111
+       # Test FAN: 3126894653473958
+       # Test FIN3: 6230247319356120
 
     The backend will handle user authentication and session management
 
