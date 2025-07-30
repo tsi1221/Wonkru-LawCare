@@ -242,9 +242,13 @@ docker-compose up --build
     Open http://localhost:3000 in your browser
 
     Use the Fayda OAuth login to authenticate
+   
        # Test FIN: 6140798523917519
+   
        # OTP: 111111
+   
        # Test FAN: 3126894653473958
+   
        # Test FIN3: 6230247319356120
 
     The backend will handle user authentication and session management
