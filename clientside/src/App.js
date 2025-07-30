@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import Services from "./pages/Services";
 import Resources from "./pages/Resources";
 import About from "./pages/About";
+import Loginfayda from './pages/Loginfayda';
 import Contact from "./pages/Contact";
 import Signup from "./components/auth/Signup";
 import LoginForm from "./components/auth/Login";
@@ -21,6 +22,7 @@ function App() {
         <Route path="/resources" element={<Resources/>} />
         <Route path="/about" element={<About/>} />
         <Route path="/contact" element={<Contact/>} /> 
+        <Route path="/loginfayda" element={<Loginfayda />} />
       </Routes>
     </Router>
   );

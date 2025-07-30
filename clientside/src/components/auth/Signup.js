@@ -9,21 +9,34 @@ const Signup = () => {
   const [role, setRole] = useState("user");
   const [error, setError] = useState("");
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Basic validation
     if (!name || !email || !password) {
       setError("Please fill in all required fields.");
       return;
     }
 
-    // You can add more validation like email format, password strength, etc.
+    try {
+      const res = await fetch("http://localhost:3001/api/auth/signup", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, email, password, role }),
+      });
 
-    setError("");
+      const data = await res.json();
 
-    // TODO: Implement API call to register user here
-    console.log("Registering user:", { name, email, password, role });
+      if (!res.ok) {
+        setError(data.error || "Signup failed.");
+        return;
+      }
+
+      alert("Registration successful. Please log in.");
+      window.location.href = "/login";
+    } catch (err) {
+      console.error(err);
+      setError("Something went wrong. Please try again.");
+    }
   };
 
   return (

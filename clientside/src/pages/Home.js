@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 import heroImage from "../assets/hero.png";
 import "../styles/Home.css";
 
@@ -11,7 +12,9 @@ const Home = () => {
         <div className="hero-overlay">
           <h1>Affordable Family Law Support,<br />Anytime, Anywhere</h1>
           <p>Connect with experienced family law professionals and access resources tailored to your needs, all within a secure and supportive environment.</p>
-          <button className="hero-button">Get Started</button>
+         <Link to="/login">
+  <button className="hero-button">Get Started</button>
+</Link>
         </div>
       </div>
     </div>

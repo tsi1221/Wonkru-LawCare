@@ -7,19 +7,37 @@ const Login = () => {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Basic front-end validation
     if (!email || !password) {
       setError("Please enter both email and password.");
       return;
     }
 
-    setError("");
+    try {
+      const res = await fetch("http://localhost:3001/api/auth/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, password }),
+      });
 
-    // TODO: Implement login API call here
-    console.log("Logging in with:", { email, password });
+      const data = await res.json();
+
+      if (!res.ok) {
+        setError(data.error || "Login failed.");
+        return;
+      }
+
+      // Store token in localStorage
+      localStorage.setItem("token", data.token);
+
+      // Redirect to dashboard
+      window.location.href = "/client-dashboard";
+    } catch (err) {
+      console.error(err);
+      setError("Something went wrong. Please try again.");
+    }
   };
 
   return (
@@ -61,7 +79,7 @@ const Login = () => {
               Forgot password?
             </Link>
           </div>
-
+          
           <button type="submit" className="login-btn" aria-label="Log in">
             Log In
           </button>
@@ -71,7 +89,7 @@ const Login = () => {
           <button
             type="button"
             className="fayadigital-btn"
-            onClick={() => alert("FaydaDigital login not implemented yet")}
+            onClick={() => window.location.href = "http://localhost:3001/login"}
             aria-label="Log in with FaydaDigital ID"
           >
             Log in with FaydaDigital ID
