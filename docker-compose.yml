@@ -1,0 +1,38 @@
+version: '3.8'
+
+services:
+  mongo:
+    image: mongo:6.0
+    container_name: mongo
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+
+  backend:
+    build:
+      context: ./BACKEND-FAYDA-AUTH
+      dockerfile: Dockerfile
+    container_name: backend-fayda-auth
+    restart: unless-stopped
+    env_file:
+      - ./BACKEND-FAYDA-AUTH/.env
+    ports:
+      - "3001:3001"
+    depends_on:
+      - mongo
+
+  frontend:
+    build:
+      context: ./clientside
+      dockerfile: Dockerfile
+    container_name: clientside
+    restart: unless-stopped
+    ports:
+      - "3000:80"  # note: nginx serves on port 80
+    environment:
+      - REACT_APP_BACKEND_URL=http://localhost:3001
+
+volumes:
+  mongo-data:
