@@ -191,3 +191,76 @@ Wonkru Law-Care stands out in the Ethiopian legal landscape through its laser fo
 🤝Bridges the urban-rural divide in legal access through tech-based low-bandwidth solutions
 
 🤝Builds public trust in digital legal platforms and fosters data integrity through secure document handling and biometric authentication
+
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+Wonkru-LawCare
+
+A digital legal service platform integrating Fayda OIDC authentication, with backend and frontend applications dockerized for easy deployment.
+Features
+
+    User authentication via Fayda OpenID Connect (OIDC) integration
+
+    Backend REST API built with Node.js, Express, MongoDB, JWT auth
+
+    Frontend React application with user login and dashboard
+
+    Dockerized setup with docker-compose for quick local deployment
+
+    Prerequisites
+
+    Docker & Docker Compose installed (Install Docker)
+
+    Git installed (Install Git)
+    Installation and Setup
+1. Clone the repository
+
+git clone https://github.com/tsi1221/Wonkru-LawCare.git
+cd Wonkru-LawCare
+
+2. Create environment file for backend
+
+Create a .env file inside the BACKEND-FAYDA-AUTH directory with:  . Build and run with Docker Compose
+
+Run the following command to build the images and start the containers:
+
+docker-compose up --build
+
+    Backend API will be available at: http://localhost:3001
+
+    Frontend React app will be available at: http://localhost:3000
+
+4. Access the application
+
+    Open http://localhost:3000 in your browser
+
+    Use the Fayda OAuth login to authenticate
+
+    The backend will handle user authentication and session management
+
+Running Locally Without Docker (Optional)
+Backend
+
+cd BACKEND-FAYDA-AUTH
+npm install
+npm start
+
+Frontend
+
+cd clientside
+npm install
+npm start
+
+Dockerfile & docker-compose Overview
+
+    BACKEND-FAYDA-AUTH/Dockerfile — Builds the backend Node.js app
+
+    clientside/Dockerfile — Builds the React frontend app
+
+    docker-compose.yml — Defines services for backend, frontend, and MongoDB
