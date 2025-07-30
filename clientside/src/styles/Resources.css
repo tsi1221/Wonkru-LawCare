@@ -1,0 +1,213 @@
+/* Resources.css */
+.resources-container {
+  padding: 80px 20px;
+  max-width: 1799px;
+  margin: 0 auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #fff;
+  min-height: 100vh;
+  
+  /* Elegant dark background with subtle texture */
+  background: 
+    linear-gradient(135deg, rgba(40, 50, 60, 0.9) 0%, rgba(25, 35, 45, 0.95) 100%),
+    url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80") 
+    no-repeat center center fixed;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  overflow: hidden;
+}
+
+.resources-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 25% 75%, rgba(70, 130, 180, 0.15) 0%, transparent 40%);
+  pointer-events: none;
+}
+
+.resources-header {
+  text-align: center;
+  margin-bottom: 60px;
+  position: relative;
+  z-index: 2;
+}
+
+.resources-header h1 {
+  font-size: 3.2rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  background: linear-gradient(to right, #ffffff, #a8d8ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  letter-spacing: 0.5px;
+}
+
+.resources-header p {
+  font-size: 1.4rem;
+  max-width: 750px;
+  margin: 0 auto;
+  line-height: 1.7;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.7);
+  font-weight: 300;
+  color: #f0f8ff;
+}
+
+.resources-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 35px;
+  padding: 0 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.resource-item {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 35px 30px;
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.3),
+    inset 0 1px 1px rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  color: #f0f8ff;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.resource-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(to bottom, #4b6cb7, #82a6f0);
+}
+
+.resource-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 
+    0 12px 40px rgba(0, 0, 0, 0.4),
+    inset 0 1px 1px rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.resource-item h3 {
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+  color: #ffffff;
+  font-weight: 600;
+  padding-left: 15px;
+  position: relative;
+}
+
+.resource-item h3::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 15px;
+  width: 40px;
+  height: 2px;
+  background: linear-gradient(to right, #4b6cb7, #82a6f0);
+  border-radius: 2px;
+}
+
+.resource-item p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #e6f0ff;
+  margin-top: 20px;
+  font-weight: 300;
+  padding-left: 15px;
+}
+
+/* Download button style (add to your JSX if needed) */
+.download-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: linear-gradient(to right, #4b6cb7, #82a6f0);
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  align-self: flex-start;
+  margin-left: 15px;
+}
+
+.download-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(75, 108, 183, 0.4);
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 1024px) {
+  .resources-header h1 {
+    font-size: 2.8rem;
+  }
+  
+  .resources-header p {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .resources-container {
+    padding: 60px 15px;
+  }
+  
+  .resources-header h1 {
+    font-size: 2.4rem;
+    margin-bottom: 15px;
+  }
+
+  .resources-header p {
+    font-size: 1.1rem;
+    max-width: 90%;
+  }
+
+  .resource-item {
+    padding: 30px 20px;
+  }
+  
+  .resource-item h3 {
+    font-size: 1.4rem;
+  }
+  
+  .resource-item p {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .resources-container {
+    padding: 50px 10px;
+  }
+  
+  .resources-header h1 {
+    font-size: 2rem;
+  }
+  
+  .resources-list {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+  
+  .resource-item h3 {
+    font-size: 1.3rem;
+  }
+}
