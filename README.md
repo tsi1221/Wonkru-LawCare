@@ -3,11 +3,11 @@
 
 👥 Contributors
 
-🧑‍💻🧑‍💻 Temesegen Lule
+🧑‍💻🧑‍💻 Temesegen Lule(temesegenllule@gmail.com)
 
-🧑‍💻🧑‍💻 Tsehaynesh Biruh
+🧑‍💻🧑‍💻 Tsehaynesh Biruh  (tsehayneshbiruh2@gmail.com)
 
-🧑‍💻🧑‍💻 Asha Mahamed
+🧑‍💻🧑‍💻 Asha Mahamed(aisha.m8854@gmail.com)
 
 🔢 Project Synopsis
 
